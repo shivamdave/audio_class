@@ -172,7 +172,6 @@ class DataProcess:
 
         with Pool(processes = self.cpu) as p:
             # testvar = p.self.sorte,musicpath)
-            ########################################################################################
             jobs = (p.map(self.stackker, (listdir(self.sorted_audio_path + self.musicpath))))
             jobs = np.vstack(jobs[(isinstance(jobs,np.ndarray))])
 
